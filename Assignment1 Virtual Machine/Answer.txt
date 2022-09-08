@@ -1,3 +1,3 @@
 Question: Explain the terminology "virtual machine image" and why an VM image is different than a VM.
 
-Answer: 
+Answer: Virtual machine image is executable and static bits, that packages the OS and applications with data and configuration together, it's generated from a VM(e.g. .iso file). There are software to generate such .iso file and we can also download them directly from online resources. A virtual machine is a running software on a hypervisor, usually this virtual machine starts from a virtual machine image, and it's dynamically changing as we use it. The virtual machine can also be used to generate a virtual machine image with current data and configuration. In summary, a virtual machine image is a static capture of the VM, and the VM is a dynamic running software/OS.
