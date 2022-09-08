@@ -1,0 +1,3 @@
+Question: Explain the terminology "virtual machine image" and why an VM image is different than a VM.
+
+Answer: 
