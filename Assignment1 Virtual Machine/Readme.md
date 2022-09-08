@@ -23,7 +23,11 @@
 * Custom(advanced)->Next->Install disc image file, choose your iso, customize your prefered cores of CPU, user name, etc.
 * Install, boom!
 
+### Verify Signature
 
+* Inside VM, download SHA256SUMS and SHA256SUMS.gpg, open a terminal, ```gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS```
+* Check the output, add the hexidecimal before the series of code ```gpg --keyid-format long --keyserver hkp://keyserver.ubuntu.com --recv-keys 0x(code)```
+* Run again of ```gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS```
 
 # Versions
 
