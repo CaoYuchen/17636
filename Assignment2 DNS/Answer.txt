@@ -1,5 +1,14 @@
 Question: Use the internet to research DNSSEC.  What differences are there between DNS and DNSSEC, and how does DNSSEC improve security?
 
-Answer: DNSSEC is a security extension to the DNS. 
-The attirbute inherent to DNS protocal can't defend any cyberattacks, it can't check authority of the server and content query responses or if there is any modification to the responses.
-Whereas DNSSEC
+Answer: 
+DNSSEC is a security extension to the DNS. 
+
+Difference:
+- The attirbute inherent to DNS protocal can't defend any cyberattacks, it can't check authority of the server and content query responses or if there is any modification to the responses.
+- Whereas DNSSEC validates responses to DNS queries before returning them to the client device. DNSSEC uses digital signatures stored in name servers alongside common DNS record types.
+At the center of DNSSEC is a public-private key pair. Each DNS zone has a public key and a private key. Public key cryptography is the starting point for DNSSEC validation. Available to everyone, a public key provides the means to decrypt messages signed by a corresponding private key.
+With DNSSEC enabled during an attempted man-in-the-middle attack, the validating resolver rejects the response from a rogue server because it does not have the cryptographic data that validates its origins. The resolver does not return the fake response to the client.
+
+How DNSSEC improve security:
+- Data origin authentication allows a resolver to cryptographically verify that the data it received actually came from the zone where it believes the data originated.
+- Data integrity protection allows the resolver to know that the data hasn't been modified in transit since it was originally signed by the zone owner with the zone's private key.
