@@ -1,0 +1,5 @@
+Question: Use the internet to research DNSSEC.  What differences are there between DNS and DNSSEC, and how does DNSSEC improve security?
+
+Answer: DNSSEC is a security extension to the DNS. 
+The attirbute inherent to DNS protocal can't defend any cyberattacks, it can't check authority of the server and content query responses or if there is any modification to the responses.
+Whereas DNSSEC
