@@ -1,0 +1,11 @@
+Question: Why are  we using base images a best practice and give a detailed example how does layer support update process?
+
+Answer: 
+The base image is a robust and plain version of the service/application that we're looking for, it contains the basic framework to support everything we need. If we use any multi-layered images, some configurations and installations might conflict with our goals, which potentially adds more steps to finish the task.
+Built upon the base image, every layer can add more functions and services to our image.
+For example, when I built the cat container, I choose the Apache(httpd) base image because we want a web service. The first time when I play around with running the base image, I inputted several command lines to trial and error and eventually gets it work. However, if we throw the base image and lots of steps of CLI to others, it adds tasks for others to recreate it.
+Therefore, I use Dockerfile and translating command lines I inputted to several layers in Dockerfile and make it clean and concise to run.
+The Dockerfile includes LABEL to illustrate my authority to the work,
+It includes a COPY to move my customized file into website directory to be accessible from others,
+It includes RUN layer to install the ping package for the convenience of check network connections.
+In summary, it saves lots of time when I rebuild and rerun the container on a different VM.  
