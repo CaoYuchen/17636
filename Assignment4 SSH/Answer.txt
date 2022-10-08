@@ -1,0 +1,6 @@
+Question: Why is disabling root access considered a best practice for ssh?
+
+Answer: 
+The root is the superuser account in Unix and Linux based systems. Once we have access to the root account, we have complete system access. Because the username is always root and the access rights are unlimited, this account is the most valuable target for hackers.
+There are a lot of bots scanning the Internet for systems with exposed SSH ports. When they find one, they will attempt to login using common usernames and try to guess the password.
+Imagine that a bot gets lucky and guesses the root password. Because root gives access to the whole machine, the machine should be considered lost at this time.
